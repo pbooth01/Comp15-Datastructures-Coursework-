@@ -1,0 +1,12 @@
+Start Time: 900
+End Time: 1000
+Description: Breakfast
+
+Start Time: 1200
+End Time: 1300
+Description: Lunch
+
+Start Time: 1700
+End Time: 1800
+Description: Dinner
+

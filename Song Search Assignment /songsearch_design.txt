@@ -1,0 +1,41 @@
+	To start of my program will read in all of the individual lyrics that are
+contained inside all of the songs and use them to create a hash table of all of
+the individual lyrics inside all of the songs.  So the hash table will create
+a dynamic array.  One thing to think about with this idea is where I want the
+array size to start as well as how I want it to increment taking into account
+both efficiency as well as the amount of wasted space at the end.
+	Then under each word in the hash table there will be a dynmic array of
+song structs, and each struct in the array will represent a song that contains
+the word it is located under in the hash table.  The song struct will look lke
+this:
+
+	song
+	{ title 
+	  artisit 
+	  frequency (numberof times the word from hashtable appears in lyrics)
+	  vector [of song lyrics]  (needed for context)
+	  vector size
+	}
+Note: that the dynamic array that is pointed to by the hash table will be
+seperated based on song titles
+
+	Some thing to think about here is the way that I am going to keep frequency.
+Im thinking that it will be accounted for while songs are being stored in the
+hashtable.  Ill just have the frequency increment every time that same word in
+the hash table is found while under the same song name.  Then I can just use
+some sorting function to grab the top ten songs with the highest frequency
+when I'm printing. Doing it this way will be efficient because I won't have to
+worry about sorting while im storing data.
+	To account for context I can just use a loop to run through all of the
+song lyrics in the vector and then for each instance of the word print out the 5 before and
+5 after.
+
+My only major concern is the amount of time that it will take to store
+everything using this method.  I feel like it could potentially take a very
+long time.  Searching should be retty fast using this method because im using
+the hash tbale to make words into the adresses of all of the songs that
+contain it.  
+
+Signed off by: TA Daniel Kim
+
+
